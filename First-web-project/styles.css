@@ -1,0 +1,338 @@
+body {
+    background-color: #3a6768;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+@keyframes magnifier {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.015);
+    }
+}
+
+@keyframes magnifier-nav {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* -----------Header----------- */
+
+.header-img {
+    display: block;
+    align-items: center;
+    background-color: #6aa090;
+}
+
+.header-img > img {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+/* -----------Nav----------- */
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    background-color: #6aa090;
+    margin: 10px 10px 35px 10px;
+    padding: 10px 0px 10px 0px;
+    font-family: 'Ubuntu', sans-serif;
+    column-gap: 50px;
+    row-gap: 10px;
+}
+
+.nav-bar > div > a{
+    color: white;
+}
+
+.nav-bar div:hover {
+    animation: magnifier-nav 1s;
+    background-color: #3a6768;
+}
+
+/* -----------Promo-bar----------- */
+
+.main-promo {
+    display: flex;
+    margin: 5px 25px 5px 25px;
+    padding: 0px 25px 0px 25px;
+    border-radius: 15px;
+    gap: 25px;
+}
+
+.main-promo div:first-child {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-promo div:last-child {
+    flex: 1.5;
+    margin: 2rem;
+}
+
+.main-promo h1 {
+    text-align: center;
+    color: #d5d7b1;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.main-promo p {
+    color: #d5d7b1;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    text-align: justify;
+}
+
+.main-promo p:last-of-type {
+    margin-bottom: 0;
+}
+
+.main-promo:first-of-type div:first-child{
+    background-image: url("garden1.jpg");
+}
+
+@media all and (max-width: 600px) {
+    .main-promo div { flex: 1 !important; }
+  }
+
+@media all and (max-width: 900px) {
+    .main-promo { flex-direction: column; } 
+    .main-promo div:first-child {
+      min-height: 200px;
+    }
+  }
+
+.main-promo:hover {
+    animation: magnifier 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* -----------Shop----------- */
+
+.main-all {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: #6aa090;
+    margin: 50px 25px 50px 25px;
+    padding: 0 10px 50px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+}
+
+.main-all h2 {
+    color: aliceblue;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.main-all h3 {
+    margin: 10px 0 0 0;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.main-all h4 {
+    margin: 0;
+    color: #d5d7b1;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main-all article {
+    flex: 1 1 350px;
+    padding: 2rem;
+}
+
+.shop-header {
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #3a6768;
+    border: 2px solid white;
+    margin: 25px 25px 0 25px;
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+.plant-box-text {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    color: aliceblue;
+    margin: 5px 0 5px 0;
+}
+
+.price-value{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0px;
+    color: #d5d7b1;
+}
+
+/* -----------Plant-1----------- */
+
+.plant1-box {
+    overflow: hidden;
+    order: 2;
+    box-shadow: 0px 0px 10px 1px #3a6768;
+    background-color: #3a6768;
+    border: 1px solid white;
+    border-radius: 35px;
+    margin: 0 25px 0 25px;
+}
+
+#plant1 {
+    width: 285px;
+    height: 285px;
+    border-radius: 15px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.plant1-box:hover {
+    animation: magnifier 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* -----------Plant-2----------- */
+
+.plant2-box {
+    order: 4;
+    box-shadow: 0px 0px 10px 1px #3a6768;
+    background-color: #3a6768;
+    border: 1px solid white;
+    border-radius: 35px;
+    margin: 0 25px 0 25px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+#plant2 {
+    width: 285px;
+    height: 285px;
+    border-radius: 15px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.plant2-box:hover {
+    animation: magnifier 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* -----------Plant-3----------- */
+
+.plant3-box {
+    order: 6;
+    box-shadow: 0px 0px 10px 1px #3a6768;
+    background-color: #3a6768;
+    border: 1px solid white;
+    border-radius: 35px;
+    margin: 0 25px 0 25px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+#plant3 {
+    width: 285px;
+    height: 285px;
+    border-radius: 15px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.plant3-box:hover {
+    animation: magnifier 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.button-plant3 {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* -----------More-box----------- */
+
+.more-box {
+    order: 7;
+    flex-basis: 100%;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 25px 0 25px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#more-button {
+    /* position: absolute; */
+    background: url(bg-plants.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 500px;
+    height: 100px;
+}
+
+#more-button:hover {
+    animation: magnifier 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* -----------footer----------- */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 25px 25px 25px;
+    padding: 25px 25px 25px 25px;
+    background-color: #6aa090;
+    border-radius: 15px;
+    gap: 30px;
+}
+
+footer div:first-child {
+    display: flex;
+    flex-grow: 5;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div:last-child {
+    flex-grow: 1;
+    text-align: end;
+    text-decoration: dashed;
+    font-family: 'Ubuntu', sans-serif;
+}
